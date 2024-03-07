@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Открытка к 8 Марта</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  .card {
+    max-width: 400px;
+    padding: 40px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    z-index: -1;
+  }
+  .top-left { top: -25px; left: -25px; }
+  .top-right { top: -25px; right: -25px; }
+  .bottom-left { bottom: -25px; left: -25px; }
+  .bottom-right { bottom: -25px; right: -25px; }
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    background-color: #ff0000;
+    border-radius: 50% 50% 0 0;
+  }
+  .heart::before { left: 0; transform: rotate(-45deg); }
+  .heart::after { right: 0; transform: rotate(45deg); }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Уважаемые дамы из группы sis-2127</h1>
+  <h2>С Днём 8 Марта!</h2>
+  <p>Счастья, радости, улыбок вам в этот день!<br>
+  Пусть солнце ярко светит, цветы расцветают,<br>
+  А сердца наполняются любовью и теплом.<br>
+  Желаем счастья, заботы и тепла в душе!</p>
+  <div class="heart top-left"></div>
+  <div class="heart top-right"></div>
+  <div class="heart bottom-left"></div>
+  <div class="heart bottom-right"></div>
+</div>
+</body>
+</html>
